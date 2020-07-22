@@ -38,6 +38,7 @@ const userSchema = new mongoose.Schema({
   email: String,
   password: String,
   googleId: String,
+  facebookId: String,
 });
 
 userSchema.plugin(passportLocalMongoose);
@@ -180,30 +181,3 @@ const port = 3000;
 app.listen(port, () => {
   console.log('Server has started successfully');
 });
-
-// FB.getLoginStatus(function (response) {
-//   statusChangeCallback(response);
-// });
-
-// {
-//     status: 'connected',
-//     authResponse: {
-//         accessToken: '...',
-//         expiresIn:'...',
-//         signedRequest:'...',
-//         userID:'...'
-//     }
-// }
-
-{
-  /* <fb:login-button
-  scope="public_profile,email"
-  onlogin="checkLoginState();"
-></fb:login-button>; */
-}
-
-// function checkLoginState() {
-//   FB.getLoginStatus(function (response) {
-//     statusChangeCallback(response);
-//   });
-// }
